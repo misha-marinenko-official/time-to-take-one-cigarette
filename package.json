@@ -1,0 +1,32 @@
+{
+  "name": "time-to-take-one-cigarette",
+  "version": "0.0.0",
+  "description": "The smoke time!",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misha-marinenko-official/time-to-take-one-cigarette.git"
+  },
+  "author": "Misha Marinenko <a0x77@icloud.com>",
+  "license": "GPL-3.0",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/misha-marinenko-official/time-to-take-one-cigarette/issues"
+  },
+  "homepage": "https://github.com/misha-marinenko-official/time-to-take-one-cigarette#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [
+    "macos",
+    "smoke",
+    "vue",
+    "cigarette",
+    "node",
+    "electron"
+  ],
+  "dependencies": {
+    "electron": "^2.0.7"
+  }
+}
