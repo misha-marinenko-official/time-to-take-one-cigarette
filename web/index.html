@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smoke.app</title>
+</head>
+<body>
+    <div class="app">
+        Количество доступных сигарет в день: <input type="text" v-model="inputo"> <br>
+        Количество времени когда вы можете курить (к примеру 12часов): <input type="text" v-model="inputi"> <br />
+        Вы должны курить каждых {{ (inputi/inputo)*60 }} минут
+
+        <button onclick="timer();">Запустить таймер</button>
+    </div>
+</body>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+window.app = new Vue({
+    el: ".app",
+    data: {
+        inputo: "",
+        inputi: ""
+    }
+});
+function timer(){
+    alert("started"+(window.app.inputi / window.app.inputo*60*60*1000))
+setTimeout(function(){
+    console.log("END!");
+    let no = new Notification("Smoke.app", {icon: "../icon.png", body: "Пора курить"});
+}, (window.app.inputi / window.app.inputo*60*60*1000))
+}
+</script>
+<style>
+body{
+    -webkit-app-region: drag;
+    border: 2px;
+    border-style: solid;
+}
+</style>
+</html>
